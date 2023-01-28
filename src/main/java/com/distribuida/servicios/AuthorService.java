@@ -12,7 +12,7 @@ public interface AuthorService {
 
     void saveAuthor(Author author);
 
-    void updateAuthor(Long id, Author author) throws Exception;
+    void updateAuthor(long id, Author author) throws Exception;
 
     void deleteAuthor(Long id);
 

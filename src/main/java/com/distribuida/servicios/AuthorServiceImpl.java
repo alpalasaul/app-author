@@ -32,11 +32,12 @@ public class AuthorServiceImpl implements AuthorService  {
 
     @Override
     @Transactional
-    public void updateAuthor(Long id, Author author) {
+    public void updateAuthor(long id, Author author) {
         Author authorDb = authorRepository.findById(id);
         if (authorDb != null) {
-            authorDb.setId(id);
-            authorRepository.persist(author);
+            authorDb.setFistName(author.getFistName());
+            authorDb.setLastName(author.getLastName());
+            authorRepository.persistAndFlush(authorDb);
         }
     }
 

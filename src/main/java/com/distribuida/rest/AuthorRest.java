@@ -46,11 +46,11 @@ public class AuthorRest {
     @Path("/{id}")
     @Consumes("application/json")
     @Produces("application/json")
-    public Response update(@PathParam("id") Long id, Author author) throws Exception {
+    public Response update(@PathParam("id") long id, Author author) throws Exception {
         try {
             authorService.updateAuthor(id, author);
         } catch (Exception ex) {
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Error al actualizar author").build();
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Error al actualizar author" + ex.getMessage()).build();
         }
         return Response.status((Response.Status.OK)).build();
     }

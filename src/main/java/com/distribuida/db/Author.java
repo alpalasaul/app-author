@@ -1,40 +1,29 @@
 package com.distribuida.db;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.List;
 
 @Entity
-public class Author extends PanacheEntity {
-
-    private Long id;
-    private String first_name;
-    private String last_name;
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getLast_name() {
-        return last_name;
-    }
-
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFirst_name() {
-        return first_name;
-    }
-
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
-    }
-
-
-
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Author implements Serializable {
+    public static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    @Column(name = "first_name")
+    private String fistName;
+    @Column(name = "last_name")
+    private String lastName;
+    @OneToMany(orphanRemoval = true)
+    @JoinColumn(name = "author_id", nullable = false)
+    private List<Book> books;
 }
