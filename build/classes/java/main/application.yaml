@@ -1,0 +1,18 @@
+quarkus:
+  datasource:
+    username: postgres
+    password: postgres
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/postgres
+    db-kind: postgresql
+  http:
+    port: 8081
+
+
+
+#quarkus.datasource.db-kind=postgresql
+#quarkus.datasource.username=postgres
+#quarkus.datasource.password=postgres
+#quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/postgres
+#quarkus.datasource.jdbc.max-size=16
+#quarkus.http.port=8081
