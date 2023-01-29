@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 @ApplicationScoped
-@Path("/author")
+@Path("/api/author")
 public class AuthorRest {
 
     @Inject

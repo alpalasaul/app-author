@@ -35,7 +35,7 @@ public class AuthorServiceImpl implements AuthorService  {
     public void updateAuthor(long id, Author author) {
         Author authorDb = authorRepository.findById(id);
         if (authorDb != null) {
-            authorDb.setFistName(author.getFistName());
+            authorDb.setFirstName(author.getFirstName());
             authorDb.setLastName(author.getLastName());
             authorRepository.persistAndFlush(authorDb);
         }
