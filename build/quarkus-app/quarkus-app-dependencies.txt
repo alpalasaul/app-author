@@ -3,6 +3,7 @@ com.aayushatharva.brotli4j:brotli4j::jar:1.8.0
 com.fasterxml.jackson.core:jackson-annotations::jar:2.14.1
 com.fasterxml.jackson.core:jackson-core::jar:2.14.1
 com.fasterxml.jackson.core:jackson-databind::jar:2.14.1
+com.fasterxml.jackson.dataformat:jackson-dataformat-toml::jar:2.14.1
 com.fasterxml.jackson.datatype:jackson-datatype-guava::jar:2.14.1
 com.fasterxml.jackson.datatype:jackson-datatype-jdk8::jar:2.14.1
 com.fasterxml.jackson.datatype:jackson-datatype-jsr310::jar:2.14.1
@@ -63,6 +64,7 @@ io.quarkus:quarkus-credentials::jar:2.16.0.Final
 io.quarkus:quarkus-datasource-common::jar:2.16.0.Final
 io.quarkus:quarkus-datasource::jar:2.16.0.Final
 io.quarkus:quarkus-development-mode-spi::jar:2.16.0.Final
+io.quarkus:quarkus-flyway::jar:2.16.0.Final
 io.quarkus:quarkus-fs-util::jar:0.0.9
 io.quarkus:quarkus-hibernate-orm-panache-common::jar:2.16.0.Final
 io.quarkus:quarkus-hibernate-orm-panache::jar:2.16.0.Final
@@ -143,6 +145,7 @@ org.checkerframework:checker-qual::jar:3.29.0
 org.eclipse.microprofile.config:microprofile-config-api::jar:2.0.1
 org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api::jar:1.2
 org.eclipse.microprofile.health:microprofile-health-api::jar:3.1
+org.flywaydb:flyway-core::jar:9.11.0
 org.glassfish.jaxb:jaxb-runtime::jar:2.3.3-b02
 org.glassfish.jaxb:txw2::jar:2.3.3-b02
 org.glassfish:jakarta.json::jar:1.1.6

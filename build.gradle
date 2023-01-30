@@ -32,6 +32,7 @@ dependencies {
     implementation 'com.zaxxer:HikariCP:5.0.1'
     implementation 'org.postgresql:postgresql:42.5.1'
     implementation 'org.jboss.resteasy:resteasy-jackson2-provider:4.7.4.Final'
+    implementation group: 'io.quarkus', name: 'quarkus-flyway', version: '3.0.0.Alpha3'
 
 
     // paanche

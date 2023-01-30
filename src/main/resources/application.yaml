@@ -1,17 +1,12 @@
 quarkus:
   datasource:
-    username: hebzkbet
-    password: hNIb6nhqrRSiNhyYXbZVlkQbUFNL5jKY
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     jdbc:
-      url: jdbc:postgresql://arjuna.db.elephantsql.com:5432/hebzkbet
+      url: ${DB_URL}
     db-kind: postgresql
   http:
     port: 8081
-
-
-#quarkus.datasource.db-kind=postgresql
-#quarkus.datasource.username=postgres
-#quarkus.datasource.password=postgres
-#quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/postgres
-#quarkus.datasource.jdbc.max-size=16
-#quarkus.http.port=8081
+  flyway:
+    migrate-at-start: true
+    out-of-order: true
