@@ -38,6 +38,10 @@ dependencies {
     // paanche
     annotationProcessor("io.quarkus:quarkus-panache-common")
     implementation("io.quarkus:quarkus-config-yaml")
+
+
+    // open api
+    implementation("io.quarkus:quarkus-smallrye-openapi")
 }
 application {
     mainClassName = 'com.distribuida.Main'
